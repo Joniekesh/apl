@@ -201,7 +201,7 @@ export const postsColumns = ({
 
       return (
         <div
-          className="text-sm max-w-75 bg-white overflow-hidden truncate"
+          className="text-sm max-w-30 bg-white overflow-hidden line-clamp-1"
           dangerouslySetInnerHTML={{ __html: cleanHtml }}
         />
       );
