@@ -20,14 +20,14 @@ const News = () => {
 
   const {
     data = [],
-    isFetching,
+    isLoading,
     isError,
   } = useQuery<IPost[]>({
     queryKey: ["posts"],
     queryFn: fetchPosts,
   });
 
-  if (isFetching) return <SpinnerCustom />;
+  if (isLoading) return <SpinnerCustom />;
   if (isError) return <span>No posts yet</span>;
 
   return (

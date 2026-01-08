@@ -55,7 +55,7 @@ const Users = () => {
 
   const {
     data = [],
-    isFetching,
+    isLoading,
     isError,
   } = useQuery<IUser[]>({
     queryKey: ["users"],
@@ -137,7 +137,7 @@ const Users = () => {
     mutation.mutate(inputs);
   };
 
-  if (isFetching) return <SpinnerCustom />;
+  if (isLoading) return <SpinnerCustom />;
   if (isError) return <p>Something went wrong!</p>;
 
   return (

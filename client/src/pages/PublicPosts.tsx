@@ -20,7 +20,7 @@ const PublicPosts = () => {
 
   const {
     data = [],
-    isFetching,
+    isLoading,
     isError,
   } = useQuery<IPost[]>({
     queryKey: ["posts"],
@@ -29,7 +29,7 @@ const PublicPosts = () => {
 
   console.log("POSTS", data);
 
-  if (isFetching) return <SpinnerCustom />;
+  if (isLoading) return <SpinnerCustom />;
   if (isError) return <span>Error fetching posts</span>;
 
   return (

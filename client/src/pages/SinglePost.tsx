@@ -19,7 +19,7 @@ const SinglePost = () => {
     }
   };
 
-  const { data, isFetching, isError } = useQuery<IPost>({
+  const { data, isLoading, isError } = useQuery<IPost>({
     queryKey: ["posts", id],
     queryFn: fetchPost,
   });
@@ -29,7 +29,7 @@ const SinglePost = () => {
     return DOMPurify.sanitize(description);
   };
 
-  if (isFetching) return <SpinnerCustom />;
+  if (isLoading) return <SpinnerCustom />;
   if (isError) return <span>Error fetching posts</span>;
 
   return (

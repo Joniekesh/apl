@@ -25,7 +25,7 @@ const Post = () => {
     }
   };
 
-  const { data, isFetching, isError } = useQuery<IPost>({
+  const { data, isLoading, isError } = useQuery<IPost>({
     queryKey: ["post", id],
     queryFn: fetchPost,
   });
@@ -34,7 +34,7 @@ const Post = () => {
 
   console.log("POST", data);
 
-  if (isFetching) return <SpinnerCustom />;
+  if (isLoading) return <SpinnerCustom />;
   if (isError) return <span>Something went wrong</span>;
 
   return (
