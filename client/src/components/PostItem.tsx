@@ -11,7 +11,7 @@ const PostItem = ({ post }: { post: IPost }) => {
   return (
     <div
       key={post._id}
-      className="flex flex-col gap-4 h-100 rounded-md bg-gray-200 p-2"
+      className="flex flex-col gap-8 h-100 rounded-md bg-gray-200 p-2"
     >
       <img src={post?.image} alt="" className="h-1/2 rounded-md object-cover" />
       <div className="flex flex-col gap-3 h-1/2">
