@@ -35,7 +35,7 @@ const PublicPosts = () => {
   return (
     <div className="flex flex-col gap-8 w-[90vw] mx-auto my-8">
       <h2 className="font-semibold text-xl">All Posts</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
         {data.map((post: IPost) => (
           <PostItem key={post._id} post={post} />
         ))}
