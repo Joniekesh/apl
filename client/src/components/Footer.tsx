@@ -60,8 +60,18 @@ const Footer = () => {
             <div className="flex items-center gap-4 *:cursor-pointer">
               <FaLinkedinIn />
               <CiTwitter />
-              <IoLogoInstagram />
-              <FaFacebookF />
+              <a
+                href="https://www.instagram.com/abapoweronline?igsh=YnFkY2E1Mm9zZnQ4&utm_source=qrl"
+                target="_blank"
+              >
+                <IoLogoInstagram />
+              </a>
+              <a
+                href="https://www.facebook.com/share/1EE7GNHfcu/?mibextid=wwXIfr"
+                target="_blank"
+              >
+                <FaFacebookF />
+              </a>
             </div>
           </div>
         </div>
