@@ -53,14 +53,7 @@ const Network = () => {
           <div
             data-aos={network.id % 2 === 0 ? "zoom-in-left" : "zoom-in-right"}
             key={network.id}
-            className={cn(
-              "bg-gray-200 box-border rounded-md p-2 flex-1 flex flex-col items-center justify-center gap-4 h-80 relative z-10",
-              (network.id === 1 || network.id === 2) &&
-                "border-r-4 border-r-apl-primary border-b-4 border-b-apl-primary",
-              (network.id === 4 || network.id === 5) &&
-                "border-l-4 border-l-apl-primary border-b-4 border-b-apl-primary",
-              network.id === 3 && "border-4 border-apl-primary"
-            )}
+            className="bg-gray-200 box-border rounded-md p-2 flex-1 flex flex-col items-center justify-center gap-4 h-80 relative z-10 transition-transform duration-300 ease-out hover:scale-[1.05] hover:border-4 hover:border-apl-primary"
           >
             <span
               className={cn(
@@ -68,7 +61,6 @@ const Network = () => {
                 network.id === 3 && "text-apl-primary"
               )}
             >
-              {" "}
               {network.count} {network.id == 3 && "+"}
             </span>
             <span className="text-lg"> {network.value} </span>

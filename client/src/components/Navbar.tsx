@@ -51,7 +51,7 @@ const Navbar = () => {
       <Sidebar open={open} setOpen={setOpen} />
 
       <div className="w-[90vw] mx-auto flex items-center justify-between">
-        <div className="flex flex-col gap-2 items-center">
+        <Link to="/" className="flex flex-col gap-2 items-center">
           <img
             src="logo.png"
             alt="APL logo"
@@ -60,7 +60,7 @@ const Navbar = () => {
           <h2 className="text-sm text-apl-primary font-semibold text-center hidden lg:flex">
             APL ELECTRICITY COMPANY
           </h2>
-        </div>
+        </Link>
 
         <div className="relative hidden lg:flex items-center gap-4 text-apl-primary">
           {links.map((link: ILink) => (
