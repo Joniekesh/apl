@@ -66,7 +66,13 @@ const Navbar = () => {
           {links.map((link: ILink) => (
             <div key={link.id} className="group">
               <div className="flex items-center gap-1 group cursor-pointer">
-                <span className="cursor-pointer font-medium">{link.name}</span>
+                <a
+                  href={link?.url}
+                  target="_blank"
+                  className="cursor-pointer font-medium"
+                >
+                  {link.name}
+                </a>
 
                 {link.data && (
                   <>
@@ -88,7 +94,7 @@ const Navbar = () => {
                         key={item.id}
                         className="cursor-pointer rounded-lg p-3 hover:bg-gray-100"
                       >
-                        <a href={item.url} className="block">
+                        <a href={item.url} target="_blank" className="block">
                           <p className="font-semibold text-sm">{item.title}</p>
                           <p className="text-xs">{item.description}</p>
                         </a>
@@ -102,9 +108,13 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="ring-1 ring-apl-primary rounded-full py-1 px-4 text-sm text-apl-primary cursor-pointer">
+          <a
+            href="https://abapower.com/tid-tokens/"
+            target="_blank"
+            className="ring-1 ring-apl-primary rounded-full py-1 px-4 text-sm text-apl-primary cursor-pointer"
+          >
             TID Tokens
-          </button>
+          </a>
           <RxHamburgerMenu
             onClick={() => setOpen((prev) => !prev)}
             className="flex lg:hidden h-6 w-6 cursor-pointer hover:text-apl-primary"

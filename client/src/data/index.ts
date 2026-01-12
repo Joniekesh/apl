@@ -34,7 +34,7 @@ export const links: ILink[] = [
         id: 1,
         title: "MAP Application",
         description: "Begin your application to getting Metered",
-        url: "#",
+        url: "https://aple.meterrequest.smartpowerbilling.com/#/about",
       },
       {
         id: 2,
@@ -71,13 +71,13 @@ export const links: ILink[] = [
         id: 1,
         title: "News Room",
         description: "Begin your application to getting Metered",
-        url: "#",
+        url: "https://apl1.netlify.app/all-posts",
       },
       {
         id: 2,
         title: "Gallery",
         description: "Learn all you need to know about MAP registration.",
-        url: "#",
+        url: "https://apl1.netlify.app/all-posts",
       },
     ],
   },
@@ -90,7 +90,7 @@ export const links: ILink[] = [
         id: 1,
         title: "E Billing",
         description: "Begin your application to getting Metered",
-        url: "#",
+        url: "https://admin.smartpowerbilling.com",
       },
       {
         id: 2,
@@ -102,7 +102,7 @@ export const links: ILink[] = [
         id: 3,
         title: "New Connection Request",
         description: "Get to know of your MAP metering Statu.",
-        url: "#",
+        url: "https://abapower.com/homepage",
       },
       {
         id: 4,
@@ -126,62 +126,36 @@ export const links: ILink[] = [
         id: 7,
         title: "Customer Support",
         description: "Learn more about the Mass Metering programm.",
-        url: "#",
+        url: "https://admin.smartpowerbilling.com/support/ticket/submit",
       },
       {
         id: 8,
         title: "APLE FAQS",
         description: "Get answers and information on your meter usage.",
-        url: "#",
+        url: "https://abapower.com/aba-power-faqs/",
       },
       {
         id: 9,
         title: "Tarrif Information",
         description: "Learn more about the Mass Metering programme.",
-        url: "#",
-      },
-      {
-        id: 10,
-        title: "Qualified Contractors",
-        description: "Get answers and information on your meter usage.",
-        url: "#",
+        url: "https://abapower.com/tarrif-plan-2",
       },
     ],
   },
   {
     id: 4,
-    name: "Payment Centers",
-    url: "#",
-    data: [
-      {
-        id: 1,
-        title: "APLE HQ",
-        description: "Begin your application to getting Metered",
-        url: "#",
-      },
-      {
-        id: 2,
-        title: "IKOT EKPENE ROAD",
-        description: "Learn all you need to know about MAP registration.",
-        url: "#",
-      },
-      {
-        id: 3,
-        title: "Quick Pay",
-        description: "Get to know of your MAP metering Status.",
-        url: "#",
-      },
-    ],
+    name: "Nkeanyi Web",
+    url: "https://nkeanyi.abapower.com/",
   },
   {
     id: 5,
     name: "Careers",
-    url: "#",
+    url: "https://geometricpower.com/careers-2/",
   },
   {
     id: 6,
     name: "About Us",
-    url: "#",
+    url: "https://abapower.com/about",
   },
 ];
 
@@ -194,12 +168,12 @@ export const services: IQuickLink[] = [
   {
     id: 2,
     title: "Customer Service",
-    url: "#",
+    url: "https://admin.smartpowerbilling.com/support/ticket/submit",
   },
   {
     id: 3,
     title: "Careers",
-    url: "#",
+    url: "https://geometricpower.com/careers-2/",
   },
 ];
 
@@ -217,11 +191,11 @@ export const quickLinks: IQuickLink[] = [
   {
     id: 3,
     title: "Customer Portal",
-    url: "#",
+    url: "https://apleportal.smartpowerbilling.com",
   },
   {
     id: 4,
     title: "FAQ",
-    url: "#",
+    url: "https://abapower.com/aba-power-faqs/",
   },
 ];

@@ -21,12 +21,14 @@ const Footer = () => {
           <h2 className="font-semibold mb-2 text-lg">Quicklinks</h2>
           <div className="flex flex-col gap-2">
             {quickLinks.map((link: IQuickLink) => (
-              <span
+              <a
+                href={link.url}
+                target="_blank"
                 key={link.id}
                 className="text-sm text-gray-200 cursor-pointer hover:text-white"
               >
                 {link.title}
-              </span>
+              </a>
             ))}
           </div>
         </div>
@@ -34,12 +36,14 @@ const Footer = () => {
           <h2 className="font-semibold mb-2 text-lg">Our Services</h2>
           <div className="flex flex-col gap-2">
             {services.map((service: IQuickLink) => (
-              <span
+              <a
+                href={service.url}
+                target="_blank"
                 key={service.id}
                 className="text-sm text-gray-200 cursor-pointer hover:text-white"
               >
                 {service.title}
-              </span>
+              </a>
             ))}
           </div>
         </div>
