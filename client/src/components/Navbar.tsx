@@ -17,28 +17,18 @@ const Navbar = () => {
     const mediaQuery = window.matchMedia(`(min-width: ${BREAKPOINTS.lg}px)`);
 
     const handleChange = (e: MediaQueryListEvent | MediaQueryList) => {
-      if (e.matches) {
-        setOpen(false);
-      }
+      if (e.matches) setOpen(false);
     };
 
-    // Run once on mount
     handleChange(mediaQuery);
-
     mediaQuery.addEventListener("change", handleChange);
 
-    return () => {
-      mediaQuery.removeEventListener("change", handleChange);
-    };
+    return () => mediaQuery.removeEventListener("change", handleChange);
   }, []);
 
   const fetchProfile = async () => {
-    try {
-      const res = await makeRequest.get("/user/me");
-      return res.data;
-    } catch (error) {
-      console.log(error);
-    }
+    const res = await makeRequest.get("/user/me");
+    return res.data;
   };
 
   const { data } = useQuery<IUser>({
@@ -47,30 +37,23 @@ const Navbar = () => {
   });
 
   return (
-    <div className="w-full mt-2 relative shadow-md">
+    <header className="w-full mt-2 relative shadow-md h-20">
       <Sidebar open={open} setOpen={setOpen} />
 
-      <div className="w-[90vw] mx-auto flex items-center justify-between">
-        <Link to="/" className="flex flex-col gap-2 items-center">
+      <div className="w-[90vw] mx-auto flex items-center justify-between h-full">
+        <Link to="/" className="flex items-center h-full">
           <img
-            src="logo.png"
+            src="apl-logo.jpg"
             alt="APL logo"
-            className="w-12 h-12 rounded-full object-cover"
+            className="h-full w-auto max-w-35 object-contain"
           />
-          <h2 className="text-sm text-apl-primary font-semibold text-center hidden lg:flex">
-            APL ELECTRICITY COMPANY
-          </h2>
         </Link>
 
-        <div className="relative hidden lg:flex items-center gap-4 text-apl-primary">
+        <nav className="relative hidden lg:flex items-center gap-4 text-apl-primary h-full">
           {links.map((link: ILink) => (
-            <div key={link.id} className="group">
-              <div className="flex items-center gap-1 group cursor-pointer">
-                <a
-                  href={link?.url}
-                  target="_blank"
-                  className="cursor-pointer font-medium"
-                >
+            <div key={link.id} className="group relative">
+              <div className="flex items-center gap-1 cursor-pointer">
+                <a href={link.url} target="_blank" className="font-medium">
                   {link.name}
                 </a>
 
@@ -85,14 +68,14 @@ const Navbar = () => {
               {link.data && (
                 <div
                   className="absolute left-0 top-full mt-3 w-xl rounded-xl bg-white shadow-lg
-                opacity-0 invisible group-hover:opacity-100 group-hover:visible
-                transition-all duration-200 z-50 text-apl-primary"
+                  opacity-0 invisible group-hover:opacity-100 group-hover:visible
+                  transition-all duration-200 z-50 text-apl-primary"
                 >
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 p-5">
                     {link.data.map((item) => (
                       <li
                         key={item.id}
-                        className="cursor-pointer rounded-lg p-3 hover:bg-gray-100"
+                        className="rounded-lg p-3 hover:bg-gray-100"
                       >
                         <a href={item.url} target="_blank" className="block">
                           <p className="font-semibold text-sm">{item.title}</p>
@@ -105,31 +88,34 @@ const Navbar = () => {
               )}
             </div>
           ))}
-        </div>
+        </nav>
 
-        <div className="flex items-center gap-4">
+        {/* Right Actions */}
+        <div className="flex items-center gap-4 h-full">
           <a
             href="https://abapower.com/tid-tokens/"
             target="_blank"
-            className="ring-1 ring-apl-primary rounded-full py-1 px-4 text-sm text-apl-primary cursor-pointer"
+            className="ring-1 ring-apl-primary rounded-full py-1 px-4 text-sm text-apl-primary"
           >
             TID Tokens
           </a>
+
           <RxHamburgerMenu
             onClick={() => setOpen((prev) => !prev)}
             className="flex lg:hidden h-6 w-6 cursor-pointer hover:text-apl-primary"
           />
+
           {data && (
-            <Avatar>
-              <Link to="/admin">
+            <Link to="/admin">
+              <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" />
                 <AvatarFallback>CN</AvatarFallback>
-              </Link>
-            </Avatar>
+              </Avatar>
+            </Link>
           )}
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 
