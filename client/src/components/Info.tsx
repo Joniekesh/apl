@@ -3,7 +3,7 @@ import { Button } from "./ui/button";
 
 const Info = () => {
   return (
-    <div className="flex flex-col gap-8 h-max ">
+    <div className="flex flex-col gap-8 h-max -mt-30">
       <p className="text-center text-3xl">
         <b>ABA Power</b> - We distribute electiricity <br /> through {""}
         <span className="text-amber-500">innovation</span> and with ultimate{" "}
