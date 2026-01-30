@@ -50,10 +50,24 @@ const About = () => {
 
           <h2 className="font-semibold text-5xl">Who We Are</h2>
           <p className="text-base">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
-            tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo. Nam nec
-            tellus a odio tincidunt auctor a ornare odio. Sed non mauris vitae
-            erat consequat auctor eu in elit.
+            Apl Electric Company Limited is a power services company focused on
+            reliable electricity solutions for homes, businesses, and
+            communities. We handle power distribution support, electrical
+            installations, maintenance, and energy management services with
+            strong attention to safety and service quality.
+          </p>
+          <p className="text-base">
+            Our team works with modern tools and practical systems to improve
+            power access, reduce downtime, and keep electrical networks running
+            smoothly. We support both public and private sector projects,
+            delivering structured solutions that meet local standards and
+            operational needs.
+          </p>
+          <p className="text-base">
+            We believe stable power drives growth, productivity, and better
+            living conditions. Our work centers on service delivery, technical
+            competence, and long term partnerships built on trust and
+            performance.
           </p>
         </div>
         <div className="flex-1">

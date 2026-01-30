@@ -43,13 +43,13 @@ const Info = () => {
                 target="_blank"
                 className="text-2xl font-semibold text-gray-700"
               >
-                Tarriff Info
+                Nkeanyi App
               </a>
               <span className="text-sm">
-                Pay your bills through our direct and alternative channels
+                Pay your electricity bill through Nkeanyi App
               </span>
               <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
-                Pay now
+                Download Now
                 <ChevronRight />
               </Button>
             </div>

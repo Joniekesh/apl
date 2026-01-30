@@ -33,6 +33,7 @@ import CustomerDetails from "./pages/CustomerDetails";
 import NewConnection from "./pages/NewConnection";
 import NewConnectionPdf from "./pages/NewConnectionPdf";
 import Faqs from "./pages/Faqs";
+import { SpinnerCustom } from "./components/spinner/Spinner";
 
 function App() {
   const fetchProfile = async () => {
@@ -40,14 +41,23 @@ function App() {
     return res.data;
   };
 
-  const { data: profile } = useQuery<IUser>({
-    queryKey: ["profile"],
-    queryFn: fetchProfile,
-  });
-
   const AdminProtected = ({ children }: { children: React.ReactNode }) => {
-    if (!profile) {
-      return <Navigate to="/" replace />;
+    const {
+      data: profile,
+      isLoading,
+      isError,
+    } = useQuery<IUser>({
+      queryKey: ["profile"],
+      queryFn: fetchProfile,
+      retry: false,
+    });
+
+    if (isLoading) {
+      return <SpinnerCustom />;
+    }
+
+    if (isError || !profile) {
+      return <Navigate to="/login" replace />;
     }
 
     if (profile.role !== "admin" && profile.role !== "staff") {

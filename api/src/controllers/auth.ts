@@ -9,7 +9,7 @@ export const register = async (req: Request, res: Response) => {
     return res
       .status(400)
       .json(
-        "First Name, Last Name, Email and Password are required to create a user!"
+        "First Name, Last Name, Email and Password are required to create a user!",
       );
   }
   const user = await User.findOne({ email });
@@ -54,7 +54,7 @@ export const login = async (req: Request, res: Response) => {
 
   const token = jwt.sign(
     { id: user._id },
-    process.env.ACCESS_TOKEN_JWT as string
+    process.env.ACCESS_TOKEN_JWT as string,
   );
 
   return res
