@@ -10,7 +10,6 @@ import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
 import type { IUser } from "../types";
 import { useQuery } from "@tanstack/react-query";
-import Loader from "../components/loader/Loader";
 
 const Login = () => {
   const [email, setEmail] = useState("");
