@@ -42,6 +42,36 @@ export const links: ILink[] = [
         description: "Get answers and information on your meter usage.",
         url: "#",
       },
+      {
+        id: 3,
+        title: "Meter Prices",
+        description: "Get answers and information on the meter prices.",
+        url: "/metering-prices",
+      },
+      {
+        id: 4,
+        title: "Meter Specifications",
+        description: "Get answers and information on the meter specifications.",
+        url: "/metering-specs-for-map",
+      },
+      {
+        id: 5,
+        title: "Meter Initialization",
+        description: "Get answers and information on the meter initialization.",
+        url: "/meter-initialization",
+      },
+      {
+        id: 6,
+        title: "MAP Refund Summary",
+        description: "Get the refund summary.",
+        url: "/refund-summary",
+      },
+      {
+        id: 7,
+        title: "Request New Connection",
+        description: "Place your request for a new connection.",
+        url: "/new-connection",
+      },
     ],
   },
   {
@@ -78,7 +108,7 @@ export const links: ILink[] = [
         id: 2,
         title: "New Connection Request",
         description: "Get to know of your MAP metering Statu.",
-        url: "https://abapower.com/homepage",
+        url: "/new-connection",
       },
       {
         id: 3,
@@ -90,13 +120,13 @@ export const links: ILink[] = [
         id: 4,
         title: "APLE FAQS",
         description: "Get answers and information on your meter usage.",
-        url: "https://abapower.com/aba-power-faqs/",
+        url: "faqs/",
       },
       {
         id: 5,
         title: "Tarrif Information",
         description: "Learn more about the Mass Metering programme.",
-        url: "https://abapower.com/tarrif-plan-2",
+        url: "/tarrif-plan",
       },
     ],
   },
@@ -113,7 +143,7 @@ export const links: ILink[] = [
   {
     id: 6,
     name: "About Us",
-    url: "https://abapower.com/about",
+    url: "/about",
   },
 ];
 
@@ -144,16 +174,16 @@ export const quickLinks: IQuickLink[] = [
   {
     id: 2,
     title: "Request New Connection",
-    url: "#",
+    url: "/new-connection",
   },
   {
     id: 3,
     title: "Customer Portal",
-    url: "https://apleportal.smartpowerbilling.com",
+    url: "customer-details",
   },
   {
     id: 4,
     title: "FAQ",
-    url: "https://abapower.com/aba-power-faqs/",
+    url: "/faqs",
   },
 ];

@@ -22,6 +22,17 @@ import UpdateUser from "./pages/admin/UpdateUser";
 import { makeRequest } from "./lib/makeRequest";
 import { useQuery } from "@tanstack/react-query";
 import type { IUser } from "./types";
+import MeteringSpecs from "./pages/MeteringSpecs";
+import MeterPrices from "./pages/MeterPrices";
+import TarrifReview from "./pages/TarrifReview";
+import TarrifPlan from "./pages/TarrifPlan";
+import About from "./pages/About";
+import RefundSummary from "./pages/RefundSummary";
+import MeterInitialization from "./pages/MeterInitialization";
+import CustomerDetails from "./pages/CustomerDetails";
+import NewConnection from "./pages/NewConnection";
+import NewConnectionPdf from "./pages/NewConnectionPdf";
+import Faqs from "./pages/Faqs";
 
 function App() {
   const fetchProfile = async () => {
@@ -67,6 +78,51 @@ function App() {
           path: "/all-posts/:id",
           element: <SinglePost />,
         },
+        {
+          path: "/metering-specs-for-map",
+          element: <MeteringSpecs />,
+        },
+        {
+          path: "/metering-prices",
+          element: <MeterPrices />,
+        },
+        {
+          path: "/tarrif-review",
+          element: <TarrifReview />,
+        },
+        {
+          path: "/tarrif-plan",
+          element: <TarrifPlan />,
+        },
+        {
+          path: "/about",
+          element: <About />,
+        },
+        {
+          path: "/refund-summary",
+          element: <RefundSummary />,
+        },
+        {
+          path: "/meter-initialization",
+          element: <MeterInitialization />,
+        },
+        {
+          path: "/customer-details",
+          element: <CustomerDetails />,
+        },
+
+        {
+          path: "/new-connection",
+          element: <NewConnection />,
+        },
+        {
+          path: "/new-connection-pdf",
+          element: <NewConnectionPdf />,
+        },
+        {
+          path: "/faqs",
+          element: <Faqs />,
+        },
       ],
     },
     {
@@ -78,7 +134,7 @@ function App() {
       ),
       children: [
         {
-          index: true, // ✅ THIS is the dashboard
+          index: true,
           element: <Dashboard />,
         },
         {
