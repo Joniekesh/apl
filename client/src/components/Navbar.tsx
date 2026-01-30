@@ -31,10 +31,12 @@ const Navbar = () => {
     return res.data;
   };
 
-  const { data } = useQuery<IUser>({
+  const { data: profile } = useQuery<IUser>({
     queryKey: ["profile"],
     queryFn: fetchProfile,
   });
+
+  console.log(profile);
 
   return (
     <header className="w-full mt-2 relative shadow-md h-20">
@@ -100,12 +102,7 @@ const Navbar = () => {
             TID Tokens
           </a>
 
-          <RxHamburgerMenu
-            onClick={() => setOpen((prev) => !prev)}
-            className="flex lg:hidden h-6 w-6 cursor-pointer hover:text-apl-primary"
-          />
-
-          {data && (
+          {profile && (
             <Link to="/admin">
               <Avatar>
                 <AvatarImage src="https://github.com/shadcn.png" />
@@ -113,6 +110,10 @@ const Navbar = () => {
               </Avatar>
             </Link>
           )}
+          <RxHamburgerMenu
+            onClick={() => setOpen((prev) => !prev)}
+            className="flex lg:hidden h-6 w-6 cursor-pointer hover:text-apl-primary"
+          />
         </div>
       </div>
     </header>

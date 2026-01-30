@@ -58,7 +58,7 @@ const Network = () => {
             <span
               className={cn(
                 "text-4xl font-semibold",
-                network.id === 3 && "text-apl-primary"
+                network.id === 3 && "text-apl-primary",
               )}
             >
               {network.count} {network.id == 3 && "+"}
@@ -73,18 +73,25 @@ const Network = () => {
         <div className="flex flex-col gap-4 bg-apl-primary rounded-md text-white p-4 h-75 justify-center ">
           <h2 className="text-2xl font-semibold">MAP Application</h2>
           <p className="text-sm">Register on the MAP Application Portal</p>
-          <Button className="w-fit bg-transparent text-white rounded-full ring-1 ring-border hover:bg-apl-primary hover:text-white text-base cursor-pointer">
-            Register now
-            <ChevronRight />
-          </Button>
+          <a
+            href="https://aple.meterrequest.smartpowerbilling.com/#/about"
+            target="_blank"
+          >
+            <Button className="w-fit bg-transparent text-white rounded-full ring-1 ring-border hover:bg-apl-primary hover:text-white text-base cursor-pointer">
+              Register now
+              <ChevronRight />
+            </Button>
+          </a>
         </div>
         <div className="flex flex-col gap-4 rounded-md p-4 bg-gray-200 h-75 justify-center ">
           <h2 className="text-2xl font-semibold">NERC Regulations</h2>
           <p className="text-sm">Read about the NERC Orders and Regulations</p>
-          <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
-            Read more
-            <ChevronRight />
-          </Button>
+          <a href=" https://nerc.gov.ng/" target="_blank">
+            <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
+              Read more
+              <ChevronRight />
+            </Button>
+          </a>
         </div>
       </div>
     </div>

@@ -26,7 +26,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui/dropdown-menu";
 import { makeRequest } from "../lib/makeRequest";
-import { useQuery } from "@tanstack/react-query";
+import { useQuery, useQueryClient } from "@tanstack/react-query";
 import type { IUser } from "../types";
 import { logout } from "../hooks/services";
 import { Link, useNavigate } from "react-router-dom";
@@ -58,11 +58,11 @@ const items = [
 
 export function AppSidebar() {
   const navigate = useNavigate();
+  const queryClient = useQueryClient();
 
   const fetchProfile = async () => {
     try {
       const res = await makeRequest.get("/user/me");
-      // console.log(res)
       return res.data;
     } catch (error) {
       console.log(error);
@@ -76,12 +76,13 @@ export function AppSidebar() {
 
   const handleLogout = () => {
     logout();
+    queryClient.removeQueries({ queryKey: ["profile"] });
     navigate("/");
   };
 
   return (
-    <Sidebar>
-      <SidebarContent className="bg-apl-primary text-white">
+    <Sidebar className="h-screen">
+      <SidebarContent className="bg-apl-primary text-white flex-1">
         <SidebarGroup>
           <SidebarGroupLabel className="text-white items-center text-2xl">
             <Link to="/">APL</Link>

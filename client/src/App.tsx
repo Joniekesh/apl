@@ -19,18 +19,27 @@ import PublicPosts from "./pages/PublicPosts";
 import SinglePost from "./pages/SinglePost";
 import UpdatePost from "./pages/admin/UpdatePost";
 import UpdateUser from "./pages/admin/UpdateUser";
+import { makeRequest } from "./lib/makeRequest";
+import { useQuery } from "@tanstack/react-query";
+import type { IUser } from "./types";
 
 function App() {
+  const fetchProfile = async () => {
+    const res = await makeRequest.get("/user/me");
+    return res.data;
+  };
+
+  const { data: profile } = useQuery<IUser>({
+    queryKey: ["profile"],
+    queryFn: fetchProfile,
+  });
+
   const AdminProtected = ({ children }: { children: React.ReactNode }) => {
-    const data = localStorage.getItem("user") || "{}";
-
-    const currentUser = JSON.parse(data);
-
-    if (!currentUser) {
+    if (!profile) {
       return <Navigate to="/" replace />;
     }
 
-    if (currentUser.role !== "admin" && currentUser.role !== "staff") {
+    if (profile.role !== "admin" && profile.role !== "staff") {
       return <Navigate to="/" replace />;
     }
 
@@ -69,7 +78,7 @@ function App() {
       ),
       children: [
         {
-          path: "/admin",
+          index: true, // ✅ THIS is the dashboard
           element: <Dashboard />,
         },
         {

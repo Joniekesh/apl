@@ -8,6 +8,9 @@ import { useNavigate } from "react-router-dom";
 import { Spinner } from "../components/ui/spinner";
 import { Eye, EyeOff } from "lucide-react";
 import { useEffect, useState } from "react";
+import type { IUser } from "../types";
+import { useQuery } from "@tanstack/react-query";
+import Loader from "../components/loader/Loader";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -16,13 +19,25 @@ const Login = () => {
   const [show, setShow] = useState(false);
   const navigate = useNavigate();
 
-  useEffect(() => {
-    const storedUser = localStorage.getItem("user");
+  const fetchProfile = async () => {
+    try {
+      const res = await makeRequest.get("/user/me");
+      return res.data;
+    } catch (error) {
+      console.log(error);
+    }
+  };
 
-    if (storedUser) {
+  const { data: profile } = useQuery<IUser>({
+    queryKey: ["profile"],
+    queryFn: fetchProfile,
+  });
+
+  useEffect(() => {
+    if (profile) {
       navigate("/admin", { replace: true });
     }
-  }, [navigate]);
+  }, [navigate, profile]);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -40,7 +55,6 @@ const Login = () => {
     try {
       const res = await makeRequest.post("/auth/login", { email, password });
       if (res.status === 200) {
-        localStorage.setItem("user", JSON.stringify(res.data));
         navigate("/admin");
       }
       setLoading(false);

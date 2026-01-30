@@ -6,7 +6,7 @@ const Info = () => {
     <div className="flex flex-col gap-8 h-max -mt-26">
       <p className="text-center text-3xl">
         <b>ABA Power</b> - We distribute electiricity <br /> through {""}
-        <span className="text-amber-500">innovation</span> and with ultimate{" "}
+        <span className="text-[#F7C315] ">innovation</span> and with ultimate{" "}
         <br /> customer service
       </p>
 
@@ -24,10 +24,12 @@ const Info = () => {
             <p className="text-[17px] text-gray-700">
               The Aba IPP is a major pioneer of the Aba Electric Company
             </p>
-            <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
-              Learn more
-              <ChevronRight />
-            </Button>
+            <a href="https://abapower.com/about" target="_blank">
+              <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
+                Learn more
+                <ChevronRight />
+              </Button>
+            </a>
           </div>
           <div
             data-aos="fade-up"
@@ -35,9 +37,14 @@ const Info = () => {
           >
             <div className="flex flex-col gap-4 bg-gray-200 p-4 rounded-md">
               <img src="/naira-logo.png" alt="" className="w-30 h-30" />
-              <p className="text-2xl font-semibold text-gray-700">
+              <a
+                // href="xhttps://apleportal.smartpowerbilling.com/"
+                href="https://nkeanyi.abapower.com/"
+                target="_blank"
+                className="text-2xl font-semibold text-gray-700"
+              >
                 Tarriff Info
-              </p>
+              </a>
               <span className="text-sm">
                 Pay your bills through our direct and alternative channels
               </span>
