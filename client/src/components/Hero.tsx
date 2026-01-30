@@ -10,23 +10,14 @@ const Hero = () => {
       autoPlay
       infiniteLoop
     >
-      <div className="h-[20vh] md:h-auto rounded-md overflow-hidden">
-        <img
-          src="/carousel1.png"
-          className="h-full w-full object-cover md:h-auto md:object-contain"
-        />
+      <div className="rounded-md overflow-hidden">
+        <img src="/carousel1.png" className="object-cover" />
       </div>
-      <div className="h-[20vh] md:h-auto rounded-md overflow-hidden">
-        <img
-          src="/carousel2.png"
-          className="h-full w-full object-cover md:h-auto md:object-contain"
-        />
+      <div className="rounded-md overflow-hidden">
+        <img src="/carousel2.png" className="object-cover" />
       </div>
-      <div className="h-[20vh] md:h-auto rounded-md overflow-hidden">
-        <img
-          src="/carousel3.png"
-          className="h-full w-full object-cover md:h-auto md:object-contain"
-        />
+      <div className="rounded-md overflow-hidden">
+        <img src="/carousel3.png" className="object-cover" />
       </div>
     </Carousel>
   );
