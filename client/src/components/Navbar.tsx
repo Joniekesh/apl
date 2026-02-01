@@ -55,9 +55,15 @@ const Navbar = () => {
           {links.map((link: ILink) => (
             <div key={link.id} className="group relative">
               <div className="flex items-center gap-1 cursor-pointer">
-                <a href={link.url} target="_blank" className="font-medium">
-                  {link.name}
-                </a>
+                {link.isExternal ? (
+                  <a href={link.url} target="_blank" className="font-medium">
+                    {link.name}
+                  </a>
+                ) : (
+                  <Link to={link.url} className="font-medium">
+                    {link.name}
+                  </Link>
+                )}
 
                 {link.data && (
                   <>
@@ -79,10 +85,21 @@ const Navbar = () => {
                         key={item.id}
                         className="rounded-lg p-3 hover:bg-gray-100"
                       >
-                        <a href={item.url} target="_blank" className="block">
-                          <p className="font-semibold text-sm">{item.title}</p>
-                          <p className="text-xs">{item.description}</p>
-                        </a>
+                        {item.isExternal ? (
+                          <a href={item.url} target="_blank" className="block">
+                            <p className="font-semibold text-sm">
+                              {item.title}
+                            </p>
+                            <p className="text-xs">{item.description}</p>
+                          </a>
+                        ) : (
+                          <Link to={item.url} className="block">
+                            <p className="font-semibold text-sm">
+                              {item.title}
+                            </p>
+                            <p className="text-xs">{item.description}</p>
+                          </Link>
+                        )}
                       </li>
                     ))}
                   </ul>

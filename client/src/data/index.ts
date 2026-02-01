@@ -3,12 +3,14 @@ export interface IData {
   title: string;
   description: string;
   url: string;
+  isExternal?: boolean;
 }
 
 export interface ILink {
   id: number;
   name: string;
   url: string;
+  isExternal?: boolean;
   data?: IData[];
 }
 
@@ -35,6 +37,7 @@ export const links: ILink[] = [
         title: "MAP Application",
         description: "Begin your application to getting Metered",
         url: "https://aple.meterrequest.smartpowerbilling.com/#/about",
+        isExternal: true,
       },
       {
         id: 2,
@@ -89,6 +92,7 @@ export const links: ILink[] = [
         title: "E Billing",
         description: "Begin your application to getting Metered",
         url: "https://admin.smartpowerbilling.com",
+        isExternal: true,
       },
       {
         id: 2,
@@ -101,6 +105,7 @@ export const links: ILink[] = [
         title: "Customer Support",
         description: "Get reliable industry leading customer support.",
         url: "https://admin.smartpowerbilling.com/support/ticket/submit",
+        isExternal: true,
       },
       {
         id: 4,
@@ -126,11 +131,13 @@ export const links: ILink[] = [
     id: 4,
     name: "Nkeanyi Web",
     url: "https://nkeanyi.abapower.com/",
+    isExternal: true,
   },
   {
     id: 5,
     name: "Careers",
     url: "https://geometricpower.com/careers-2/",
+    isExternal: true,
   },
   {
     id: 6,

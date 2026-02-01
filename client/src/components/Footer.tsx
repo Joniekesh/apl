@@ -36,14 +36,13 @@ const Footer = () => {
           <h2 className="font-semibold mb-2 text-lg">Our Services</h2>
           <div className="flex flex-col gap-2">
             {services.map((service: IQuickLink) => (
-              <a
-                href={service.url}
-                target="_blank"
+              <Link
+                to={service.url}
                 key={service.id}
                 className="text-sm text-gray-200 cursor-pointer hover:text-white"
               >
                 {service.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
