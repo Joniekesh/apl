@@ -117,7 +117,7 @@ export const links: ILink[] = [
       {
         id: 6,
         title: "Tarrif Review",
-        description: "Get up to data tarrif reviews.",
+        description: "Get up to date tarrif reviews.",
         url: "/tarrif-review",
       },
     ],
