@@ -40,7 +40,7 @@ export const links: ILink[] = [
         id: 2,
         title: "MAP Customer Portal",
         description: "Get answers and information on your meter usage.",
-        url: "#",
+        url: "/customer-details",
       },
       {
         id: 3,
@@ -77,21 +77,7 @@ export const links: ILink[] = [
   {
     id: 2,
     name: "Media",
-    url: "#",
-    data: [
-      {
-        id: 1,
-        title: "News Room",
-        description: "Begin your application to getting Metered",
-        url: "https://apl1.netlify.app/all-posts",
-      },
-      {
-        id: 2,
-        title: "Gallery",
-        description: "Learn all you need to know about MAP registration.",
-        url: "https://apl1.netlify.app/all-posts",
-      },
-    ],
+    url: "/all-posts",
   },
   {
     id: 3,
@@ -113,20 +99,26 @@ export const links: ILink[] = [
       {
         id: 3,
         title: "Customer Support",
-        description: "Learn more about the Mass Metering programm.",
+        description: "Get reliable industry leading customer support.",
         url: "https://admin.smartpowerbilling.com/support/ticket/submit",
       },
       {
         id: 4,
         title: "APLE FAQS",
         description: "Get answers and information on your meter usage.",
-        url: "faqs/",
+        url: "/faqs",
       },
       {
         id: 5,
         title: "Tarrif Information",
         description: "Learn more about the Mass Metering programme.",
         url: "/tarrif-plan",
+      },
+      {
+        id: 6,
+        title: "Tarrif Review",
+        description: "Get up to data tarrif reviews.",
+        url: "/tarrif-review",
       },
     ],
   },
@@ -151,7 +143,7 @@ export const services: IQuickLink[] = [
   {
     id: 1,
     title: "Metering",
-    url: "#",
+    url: "https://aple.meterrequest.smartpowerbilling.com/#/about",
   },
   {
     id: 2,
@@ -169,7 +161,7 @@ export const quickLinks: IQuickLink[] = [
   {
     id: 1,
     title: "Risk Policy Statement",
-    url: "#",
+    url: "/",
   },
   {
     id: 2,
@@ -179,11 +171,21 @@ export const quickLinks: IQuickLink[] = [
   {
     id: 3,
     title: "Customer Portal",
-    url: "customer-details",
+    url: "/customer-details",
   },
   {
     id: 4,
-    title: "FAQ",
+    title: "FAQs",
     url: "/faqs",
+  },
+  {
+    id: 5,
+    title: "Terms & Conditions",
+    url: "/terms",
+  },
+  {
+    id: 6,
+    title: "Privacy",
+    url: "/privacy",
   },
 ];

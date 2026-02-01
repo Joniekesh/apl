@@ -11,9 +11,9 @@ const Hero = () => {
         autoPlay
         infiniteLoop
       >
-        <div>
+        {/* <div>
           <img src="/carousel4.png" className="object-cover w-full h-full" />
-        </div>
+        </div> */}
         <div>
           <img src="/carousel2.png" className="object-cover w-full h-full" />
         </div>

@@ -34,6 +34,10 @@ import NewConnection from "./pages/NewConnection";
 import NewConnectionPdf from "./pages/NewConnectionPdf";
 import Faqs from "./pages/Faqs";
 import { SpinnerCustom } from "./components/spinner/Spinner";
+import NotFound from "./pages/NotFound";
+import TidTokens from "./pages/TidTokens";
+import Privacy from "./pages/Privacy";
+import TermsAndConditions from "./pages/TermsAndConditions";
 
 function App() {
   const fetchProfile = async () => {
@@ -133,6 +137,18 @@ function App() {
           path: "/faqs",
           element: <Faqs />,
         },
+        {
+          path: "/tid-tokens",
+          element: <TidTokens />,
+        },
+        {
+          path: "/privacy",
+          element: <Privacy />,
+        },
+        {
+          path: "/terms",
+          element: <TermsAndConditions />,
+        },
       ],
     },
     {
@@ -176,6 +192,10 @@ function App() {
           element: <Settings />,
         },
       ],
+    },
+    {
+      path: "*",
+      element: <NotFound />,
     },
   ]);
 

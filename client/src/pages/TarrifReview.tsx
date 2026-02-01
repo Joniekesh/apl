@@ -1,3 +1,8 @@
+const fileUrl =
+  "https://ik.imagekit.io/Abapowerimg/Website%20Aple/Customer-bill-of-rights.pdf?updatedAt=1769793640919";
+
+const url = `https://mozilla.github.io/pdf.js/web/viewer.html?file=${encodeURIComponent(fileUrl)}`;
+
 const TarrifReview = () => {
   return (
     <div className="flex-col gap-10 items-start flex w-[90vw] mx-auto my-10 text-[18px] ">
@@ -43,6 +48,9 @@ const TarrifReview = () => {
           alt="Tarriff review image"
           className="object-cover"
         />
+      </div>
+      <div className="h-[80vh] w-full ">
+        <iframe src={url} className="w-full h-full" />
       </div>
     </div>
   );

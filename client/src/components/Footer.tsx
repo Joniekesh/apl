@@ -2,10 +2,11 @@ import { quickLinks, services, type IQuickLink } from "../data";
 import { FaFacebookF, FaLinkedinIn } from "react-icons/fa";
 import { CiTwitter } from "react-icons/ci";
 import { IoLogoInstagram } from "react-icons/io";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
-    <div className="w-full bg-apl-primary text-white h-max">
+    <div className="w-full bg-apl-primary text-white h-max mt-50">
       <div className="w-[90vw] mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 py-4">
         <div className="flex-1">
           <h2 className="font-semibold mb-2 text-lg">About Us</h2>
@@ -21,14 +22,13 @@ const Footer = () => {
           <h2 className="font-semibold mb-2 text-lg">Quicklinks</h2>
           <div className="flex flex-col gap-2">
             {quickLinks.map((link: IQuickLink) => (
-              <a
-                href={link.url}
-                target="_blank"
+              <Link
+                to={link.url}
                 key={link.id}
                 className="text-sm text-gray-200 cursor-pointer hover:text-white"
               >
                 {link.title}
-              </a>
+              </Link>
             ))}
           </div>
         </div>
@@ -58,19 +58,19 @@ const Footer = () => {
               Phone: 07001238280 / 070022276937
             </span>
             <div className="flex items-center gap-4 *:cursor-pointer">
-              <FaLinkedinIn />
-              <CiTwitter />
+              <FaLinkedinIn size={20} />
+              <CiTwitter size={20} />
               <a
                 href="https://www.instagram.com/abapoweronline?igsh=YnFkY2E1Mm9zZnQ4&utm_source=qrl"
                 target="_blank"
               >
-                <IoLogoInstagram />
+                <IoLogoInstagram size={20} />
               </a>
               <a
                 href="https://www.facebook.com/share/1EE7GNHfcu/?mibextid=wwXIfr"
                 target="_blank"
               >
-                <FaFacebookF />
+                <FaFacebookF size={20} />
               </a>
             </div>
           </div>

@@ -94,13 +94,12 @@ const Navbar = () => {
 
         {/* Right Actions */}
         <div className="flex items-center gap-4 h-full">
-          <a
-            href="https://abapower.com/tid-tokens/"
-            target="_blank"
+          <Link
+            to="/tid-tokens"
             className="ring-1 ring-apl-primary rounded-full py-1 px-4 text-sm text-apl-primary"
           >
             TID Tokens
-          </a>
+          </Link>
 
           {profile && (
             <Link to="/admin">

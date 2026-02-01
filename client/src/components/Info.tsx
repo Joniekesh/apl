@@ -1,5 +1,6 @@
 import { ChevronRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { Link } from "react-router-dom";
 
 const Info = () => {
   return (
@@ -24,12 +25,12 @@ const Info = () => {
             <p className="text-[17px] text-gray-700">
               The Aba IPP is a major pioneer of the Aba Electric Company
             </p>
-            <a href="https://abapower.com/about" target="_blank">
+            <Link to="/about" target="_blank">
               <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
                 Learn more
                 <ChevronRight />
               </Button>
-            </a>
+            </Link>
           </div>
           <div
             data-aos="fade-up"
