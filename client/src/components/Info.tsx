@@ -44,7 +44,10 @@ const Info = () => {
               <span className="text-sm">
                 Pay your electricity bill through Nkeanyi App
               </span>
-              <a href="https://nkeanyi.abapower.com/" target="_blank">
+              <a
+                href="https://play.google.com/store/apps/details?id=com.aple.customer&pcampaignid=web_share"
+                target="_blank"
+              >
                 <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
                   Download Now
                   <ChevronRight />
