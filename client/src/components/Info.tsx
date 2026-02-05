@@ -38,21 +38,18 @@ const Info = () => {
           >
             <div className="flex flex-col gap-4 bg-gray-200 p-4 rounded-md">
               <img src="/naira-logo.png" alt="" className="w-30 h-30" />
-              <a
-                // href="xhttps://apleportal.smartpowerbilling.com/"
-                href="https://nkeanyi.abapower.com/"
-                target="_blank"
-                className="text-2xl font-semibold text-gray-700"
-              >
+              <span className="text-2xl font-semibold text-gray-700">
                 Nkeanyi App
-              </a>
+              </span>
               <span className="text-sm">
                 Pay your electricity bill through Nkeanyi App
               </span>
-              <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
-                Download Now
-                <ChevronRight />
-              </Button>
+              <a href="https://nkeanyi.abapower.com/" target="_blank">
+                <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
+                  Download Now
+                  <ChevronRight />
+                </Button>
+              </a>
             </div>
             <div
               data-aos="fade-down"
@@ -66,10 +63,16 @@ const Info = () => {
                 Register on the Customer portal to access varieties of services
                 for customers.
               </span>
-              <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
-                Register now
-                <ChevronRight />
-              </Button>
+
+              <a
+                href="https://admin.smartpowerbilling.com/support/ticket/submit"
+                target="_blank"
+              >
+                <Button className="w-fit bg-transparent text-black rounded-full ring-1 ring-black hover:bg-apl-primary hover:text-white text-base cursor-pointer">
+                  Register now
+                  <ChevronRight />
+                </Button>
+              </a>
             </div>
           </div>
         </div>
