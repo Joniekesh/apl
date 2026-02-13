@@ -45,6 +45,7 @@ const CreatePost = () => {
     },
     onError: (error) => {
       toast.error(getErrorMessage(error));
+      console.log(error);
     },
   });
 
